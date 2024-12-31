@@ -1,0 +1,72 @@
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
+final_space = true
+
+	[palette]
+		red = "#e67e80"
+		orange = "#e69875"
+		yellow = "#dbbc7f"
+		green = "#a7c080"
+		aqua = "#83c092"
+		blue = "#7fbbb3"
+		purple = "#d699b6"
+		grey = "#6c6c6c"
+
+	[[blocks]]
+		type = 'prompt'
+		alignment = 'left'
+		newline = true
+
+		[[blocks.segments]]
+			type = 'path'
+			style = 'plain'
+			background = 'transparent'
+			foreground = 'p:aqua'
+			template = '{{ .Path }}'
+
+			[blocks.segments.properties]
+				style = 'full'
+
+		[[blocks.segments]]
+			type = 'text'
+			style = 'plain'
+			foreground = 'p:green'
+			background = 'transparent'
+			template = '❯'
+
+		[[blocks.segments]]
+			type = 'git'
+			style = 'plain'
+			foreground = 'p:grey'
+			background = 'transparent'
+			template = "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}"
+			
+			[blocks.segments.properties]
+				branch_icon = ''
+				commit_icon = '@'
+				fetch_status = true
+
+	[[blocks]]
+		type = 'rprompt'
+		overflow = 'hidden'
+
+		[[blocks.segments]]
+			type = 'executiontime'
+			style = 'plain'
+			foreground = 'p:yellow'
+			background = 'transparent'
+			template = '{{ if .Ms }}{{ .Ms | div 1000 }}s{{ else }}N/A{{ end }}'
+
+			[blocks.segments.properties]
+				threshold = 5000
+
+	[transient_prompt]
+		foreground = 'p:blue'
+		background = 'transparent'
+		template = '❯ '
+
+	[secondary_prompt]
+		foreground = 'p:purple'
+		background = 'transparent'
+		template = '❯❯ '
+

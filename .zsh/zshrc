@@ -1,0 +1,12 @@
+# Modulpfad
+ZSH_MODULES_DIR=~/.zsh/modules
+
+# Module laden (Farben zuerst)
+source ~/.zsh/modules/colors.zsh
+
+# Lade alle anderen Module
+for module in ~/.zsh/modules/*.zsh; do
+    [[ "$module" == *colors.zsh ]] && continue
+    source "$module"
+done
+
