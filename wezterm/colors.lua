@@ -35,14 +35,5 @@ scheme.tab_bar = {
   },
 }
 
-scheme.window_frame = {
-  active_titlebar_bg = scheme.background,
-  inactive_titlebar_bg = scheme.brights[1],
-  border_left_color = scheme.tab_bar.active_tab.bg_color,
-  border_top_color = scheme.tab_bar.active_tab.bg_color,
-  border_right_color = scheme.tab_bar.active_tab.bg_color,
-  border_bottom_color = scheme.tab_bar.active_tab.bg_color,
-}
-
 return scheme
 

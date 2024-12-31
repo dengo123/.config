@@ -30,13 +30,7 @@ config.hide_tab_bar_if_only_one_tab = true
 config.colors = colors -- Globale Farben laden
 config.colors.tab_bar = colors.tab_bar
 
--- 4. Fensterrahmen-Einstellungen
-config.window_frame = {
-  active_titlebar_bg = colors.background, -- Hintergrundfarbe der Titelleiste bei aktiven Fenstern
-  inactive_titlebar_bg = colors.brights[1], -- Hintergrundfarbe bei inaktiven Fenstern
-}
-
--- 5. Tmux-ähnliche Keybindings und Leader-Key
+-- 4. Tmux-ähnliche Keybindings und Leader-Key
 config.leader = { key = "q", mods = "ALT", timeout_milliseconds = 2000 }
 
 config.keys = {
@@ -72,7 +66,7 @@ for i = 0, 9 do
   })
 end
 
--- 6. Statusleiste
+-- 5. Statusleiste
 wezterm.on("update-right-status", function(window, _)
   local SOLID_LEFT_ARROW = ""
   local ARROW_FOREGROUND = { Foreground = { Color = colors.tab_bar.active_tab.bg_color } } -- Active tab color
