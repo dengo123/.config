@@ -20,14 +20,14 @@ if [[ -f "$HISTFILE" ]]; then
 fi
 
 # Interaktive Historie mit fzf ohne Nummern
-fzf_history_widget() {
+fzf-history-widget() {
   local selected_command
-  selected_command=$(fc -rl 1 | awk '!/^\s*$/ {print substr($0, index($0,$2))}' | fzf --height=40% --reverse --border)
+  selected_command=$(fc -rl 1 | head -n 10000 | awk '{$1=""; print substr($0,2)}' | fzf --height 40% --reverse --border)
   if [[ -n "$selected_command" ]]; then
-    LBUFFER="${selected_command}"
-    zle redisplay
+    BUFFER="$selected_command"
+    zle accept-line
   fi
 }
-zle -N fzf_history_widget
-bindkey '^R' fzf_history_widget
+zle -N fzf-history-widget
+bindkey '^R' fzf-history-widget
 
