@@ -85,7 +85,7 @@ alignment = "right"
 	background = "p:yellow"
 	invert_powerline = true
 	trailing_diamond = "\ue0b4"
-	template = " \uf073 {{ .CurrentDate | date .Format }} "
+	template = " \uf017 {{ .CurrentDate | date .Format }} "
 	
 		[blocks.segments.properties]
 		time_format = "15:04:05"
