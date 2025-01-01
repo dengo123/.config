@@ -8,7 +8,7 @@ alias v='nvim'
 alias n='nano'
 alias e='emacs'
 
-alias fm='ranger'
+alias fm='yazi'
 
 alias cl='clear'
 
