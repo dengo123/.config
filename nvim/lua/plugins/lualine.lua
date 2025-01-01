@@ -5,7 +5,7 @@ return {
     config = function()
       require("lualine").setup({
         options = {
-          theme = "everforest", -- Passe das Theme an
+          theme = "auto",
           section_separators = "",
           component_separators = "",
         },
@@ -13,3 +13,4 @@ return {
     end,
   },
 }
+

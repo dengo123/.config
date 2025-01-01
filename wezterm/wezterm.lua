@@ -10,8 +10,8 @@ config.font = wezterm.font("JetBrains Mono")
 config.font_size = 15
 
 -- 2. Fenster- und Hintergrund-Einstellungen
-config.window_background_opacity = 0.75
-config.macos_window_background_blur = 10
+config.window_background_opacity = 0.7
+config.macos_window_background_blur = 7
 config.window_decorations = "RESIZE"
 config.window_padding = {
   left = 8,

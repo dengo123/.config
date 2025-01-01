@@ -27,7 +27,14 @@ vim.opt.number = true          -- Absolute Zeilennummern
 vim.opt.relativenumber = true  -- Relative Zeilennummern
 
 -- Hintergrund transparent machen
-vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
-vim.cmd("highlight NonText guibg=NONE ctermbg=NONE")
+vim.o.termguicolors = true
+vim.wo.winblend = 20
+vim.o.pumblend = 20
+
+vim.cmd("autocmd ColorScheme * highlight Normal guibg=NONE ctermbg=NONE")
+vim.cmd("autocmd ColorScheme * highlight NonText guibg=NONE ctermbg=NONE")
+vim.cmd("autocmd ColorScheme * highlight LineNr guibg=NONE")
+vim.cmd("autocmd ColorScheme * highlight Folded guibg=NONE")
+vim.cmd("autocmd ColorScheme * highlight EndOfBuffer guibg=NONE")
 
 
