@@ -1,6 +1,10 @@
 # Modulpfad
 ZSH_MODULES_DIR=~/.zsh/modules
 
+# Default Texteditor
+export EDITOR="nvim"
+export VISUAL="nvim"
+
 # Module laden (Farben zuerst)
 source ~/.zsh/modules/colors.zsh
 

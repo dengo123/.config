@@ -8,6 +8,8 @@ alias v='nvim'
 alias n='nano'
 alias e='emacs'
 
+alias fm='ranger'
+
 alias cl='clear'
 
 alias g='git'
