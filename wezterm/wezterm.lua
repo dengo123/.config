@@ -25,7 +25,7 @@ config.enable_tab_bar = true
 config.use_fancy_tab_bar = false
 config.tab_and_split_indices_are_zero_based = true
 config.tab_bar_at_bottom = true
-config.hide_tab_bar_if_only_one_tab = false
+config.hide_tab_bar_if_only_one_tab = true
 
 config.colors = colors -- Globale Farben laden
 config.colors.tab_bar = colors.tab_bar
@@ -69,7 +69,7 @@ end
 -- 5. Statusleiste
 wezterm.on("update-right-status", function(window, _)
   local SOLID_LEFT_ARROW = ""
-  local ARROW_FOREGROUND = { Foreground = { Color = colors.tab_bar.inactive_tab.bg_color } } -- Active tab color
+  local ARROW_FOREGROUND = { Foreground = { Color = colors.tab_bar.active_tab.bg_color } } -- Active tab color
   local prefix = ""
 
   if window:leader_is_active() then
@@ -78,7 +78,7 @@ wezterm.on("update-right-status", function(window, _)
   end
 
   if window:active_tab():tab_id() == 0 then
-    ARROW_FOREGROUND = { Foreground = { Color = colors.tab_bar.active_tab.bg_color } } -- Inactive tab color
+    ARROW_FOREGROUND = { Foreground = { Color = colors.tab_bar.inactive_tab.bg_color } } -- Inactive tab color
   end -- Arrow color based on whether the tab is active or not
 
   window:set_left_status(wezterm.format {

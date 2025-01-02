@@ -22,8 +22,8 @@ local color_palette = {
 local colors = {
   foreground = color_palette.white,
   background = color_palette.obsidian,
-  cursor_bg = color_palette.yellow,
-  cursor_border = color_palette.yellow,
+  cursor_bg = color_palette.orange,
+  cursor_border = color_palette.orange,
   cursor_fg = color_palette.obsidian,
   selection_bg = color_palette.blue,
   selection_fg = color_palette.obsidian,
@@ -68,7 +68,7 @@ local colors = {
       fg_color = color_palette.green,
     },
     new_tab_hover = {
-      bg_color = color_palette.cyan,
+      bg_color = color_palette.green,
       fg_color = color_palette.obsidian,
     },
   },
