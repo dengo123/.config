@@ -10,7 +10,7 @@ after-login-command = []
 after-startup-command = []
 
 # Start AeroSpace at login
-start-at-login = true
+start-at-login = false
 
 # Normierungen und Layouts
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
@@ -20,7 +20,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 30
+accordion-padding = 100
 
 # Possible values: tiles|accordion
 default-root-container-layout = 'tiles'
@@ -163,6 +163,7 @@ alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-0 = 'workspace 10' # In your config, you can drop workspace bindings that you don't need
+
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
 alt-shift-2 = 'move-node-to-workspace 2'
@@ -206,9 +207,9 @@ alt-shift-j = 'move down'
 alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
+[mode.apps.binding]
 # alt-t = 'exec-and-forget open -a /Applications/Telegram.app'
 alt-z = 'exec-and-forget open -a /Applications/Zen-Browser.app'
-alt-o = 'exec-and-forget open -a /Applications/Obsidian.app'
 alt-p = 'exec-and-forget open -a /System/Applications/Passwords.app'
 alt-s = 'exec-and-forget open -a /System/Applications/System-Settings.app'
 alt-w = 'exec-and-forget open -a /Applications/WezTerm.app'
